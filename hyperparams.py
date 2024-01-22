@@ -2,11 +2,11 @@ class Hyperparams:
     seed = 42
 
     csv_path = "./content/jvFemale/metadata.csv"
-    wav_path = "./content/jvFemale/wavs"
+    wav_path = "./content/jvFemale/wavs2"
     save_path = "./params"
     log_path = "./train_logs"
 
-    save_name = "./model/jvTTSFemale.pt"
+    save_name = "jvTTSFemale.pt"
 
     # Text transformations params
     symbols = [
@@ -19,17 +19,17 @@ class Hyperparams:
 
     # Sounds transformations params
     sr = 22050
-    n_fft = 2048
+    n_fft = 2048  # original: 2048
     n_stft = int((n_fft//2) + 1)
 
-    frame_shift = 0.0125  # seconds
-    hop_length = int(n_fft/8.0)
+    frame_shift = 0.0125  # seconds, original: 0.0125
+    hop_length = int(n_fft/8.0)  # original: 8.0
 
-    frame_length = 0.05  # seconds
-    win_length = int(n_fft/2.0)
+    frame_length = 0.05  # seconds, original: 0.05
+    win_length = int(n_fft/2.0)  # original: 2.0
 
-    mel_freq = 128
-    max_mel_time = 1024
+    mel_freq = 128  # original: 128
+    max_mel_time = 1213  # original: 1024
 
     max_db = 100
     scale_db = 10
@@ -60,8 +60,8 @@ class Hyperparams:
     r_gate = 1.0
 
     step_print = 1000
-    step_test = 30000
-    step_save = 30000
+    step_test = 4000
+    step_save = 4000
 
 
 hp = Hyperparams()

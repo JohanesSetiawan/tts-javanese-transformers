@@ -1,3 +1,7 @@
 venv
 venv/*
-content/*
+content
+__pycache__
+create_dataset.py
+change_dataset.py
+delete_colunm.py

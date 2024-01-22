@@ -1,22 +1,27 @@
+import os
 import torch
+
 from hyperparams import hp
 
+os.environ['TORCH_USE_CUDA_DSA'] = '1'
+
 symbol_to_id = {
-  s: i for i, s in enumerate(hp.symbols)
+    s: i for i, s in enumerate(hp.symbols)
 }
 
+
 def text_to_seq(text):
-  text = text.lower()
-  seq = []
-  for s in text:
-    _id = symbol_to_id.get(s, None)
-    if _id is not None:
-      seq.append(_id)
+    text = text.lower()
+    seq = []
+    for s in text:
+        _id = symbol_to_id.get(s, None)
+        if _id is not None:
+            seq.append(_id)
 
-  seq.append(symbol_to_id["EOS"])
+    seq.append(symbol_to_id["EOS"])
 
-  return torch.IntTensor(seq)
+    return torch.IntTensor(seq)
 
 
 if __name__ == "__main__":
-  print(text_to_seq("Hello, World"))
+    print(text_to_seq("Hello, World"))

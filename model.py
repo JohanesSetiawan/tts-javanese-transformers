@@ -493,6 +493,14 @@ class TransformerTTS(nn.Module):
             float("-inf")
         )
 
+        # print("\n")
+        # print("src_key_padding_mask size:", self.src_key_padding_mask.size())
+        # print("src_mask size:", self.src_mask.size())
+        # print("tgt_key_padding_mask size:", self.tgt_key_padding_mask.size())
+        # print("tgt_mask size:", self.tgt_mask.size())
+        # print("memory_mask size:", self.memory_mask.size())
+        # print("\n")
+
         text_x = self.encoder_prenet(text)  # (N, S, E)
 
         pos_codes = self.pos_encoding(
@@ -500,6 +508,7 @@ class TransformerTTS(nn.Module):
         )  # (MAX_S_TIME, E)
 
         S = text_x.shape[1]
+
         text_x = text_x + pos_codes[:S]
         # dropout after pos encoding?
 

@@ -24,4 +24,4 @@ TBA
 
 [Medium](https://medium.com/@tttzof351/build-text-to-speech-from-scratch-part-1-ba8b313a504f#:~:text=Build%20text-to-speech%20from%20scratch%201%20Audio%20transformations.%20Theory,simply%20return%20a%20text%2Futterance%20pair%20after%20transformations%20)
 
-[Code Original](https://github.com/tttzof351/SimpleTransfromerTTS/blob/master/hyperparams.py)
+[Code Original](https://github.com/tttzof351/SimpleTransfromerTTS)
