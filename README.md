@@ -1,6 +1,6 @@
-# TTS Javanese using Transformers | *WIP*
+# TTS Javanese using Transformers | **WIP**
 
-This is toy implementation of transformer tts: https://arxiv.org/pdf/1809.08895.pdf | *WIP: Work In Progress*
+This is toy implementation of transformer tts: https://arxiv.org/pdf/1809.08895.pdf | **WIP: Work In Progress**
 
 Main simplifications:
 
